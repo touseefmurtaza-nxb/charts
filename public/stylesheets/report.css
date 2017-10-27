@@ -1,0 +1,11 @@
+/*
+div#container {
+  width: auto;
+}
+ */
+div#content {
+  overflow: auto;
+}
+.total {
+  background-color: #daf9ee;
+}

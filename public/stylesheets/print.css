@@ -1,0 +1,174 @@
+.noprint, .flash_hash, #breadcrumbs, #menu, #login_box, .update_date, g.highcharts-button, .tip img {
+  display: none !important;
+}
+body{
+  background: none;
+  width: 960px;
+}
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+div.map_report_column {
+  width: 49% !important;
+}
+
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+a:link img,
+a:visited img,
+a:hover img {
+  border: 0;
+  background: none;
+}
+div#site {
+  margin: 0 auto;
+  width: 1260px;
+}
+div#container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+div#content {
+  padding-bottom: 5px;
+  width: 100%;
+  float: left;
+}
+ h1 {
+  font-size: 1.4em;
+  margin: 0;
+  padding: 10px 10px 3px 2px;
+  color: #9e100d;
+}
+ h2 {
+  font-weight: normal;
+  font-size: larger;
+  margin: 0;
+  padding: 10px 10px 0 10px;
+}
+p {
+  font-size: 0.9em;
+  margin: 3px 0 10px;
+}
+p.q {
+  font-weight: bolder;
+}
+div#content{
+  border-bottom: none;
+}
+.pdf_logo {
+  display: block;
+  text-align: center;
+  margin-top: -2px;
+}
+
+.page_heading{
+  display: block;
+  text-align: center;
+  margin-top: 80px;
+}
+.page_heading h1{
+  font-size: 3em !important;
+  font-weight: bold !important;
+}
+.client_information{
+  display: block;
+}
+.page-break{
+  page-break-before: always !important;
+  clear: both !important;
+  display: block;
+}
+fieldset,img{
+  page-break-inside: avoid !important;
+}
+
+fieldset.report h2 {
+  font-size: 1.5em !important;
+  margin-bottom: 1em !important;
+}
+legend {
+  text-indent: -4px !important;
+}
+
+body.client_interface_maps_show fieldset.report.first{
+  border-top: 2px solid #AAA !important;
+  border-top-color: #9e100d !important;
+}
+
+body.client_interface_maps_show fieldset.report.first legend{
+  display: block !important;
+}
+body.client_interface_maps_show fieldset.report.client_information{
+    margin-bottom: 80px !important;
+    margin-top: 150px !important;
+}
+
+.debt_report_heading, .mortgage_report_heading {
+    margin-bottom: 50px !important;
+}
+
+.mortgage-report-cont legend{
+    font-size: 1.4em !important;
+}
+
+.free_analysis.report .free_analysis{
+    border: none !important;
+    width: 100%;
+}
+
+.disclaimer_analysis{
+    text-align: left !important;
+    font-size: 1.0em !important;
+    margin: 50px 0 10px !important;
+}
+.hide_in_pdf{
+    display: none !important;
+}
+.client-report-box {
+    overflow: visible;
+}
+.debt_report_heading {
+    display: block;
+}
+.client-info-report {
+    padding-left: 10px;
+    /*padding-bottom: 400px;*/
+    padding-top: 150px;
+}
+h2{
+    margin-left:  -10px;
+}
+.client-report-box,.client-info-report,.mortgage_graph_page_breaker,.after-page-break {
+    page-break-after: always;
+}
+.before_page_break_all {
+    page-break-before: always;
+}
+.before_page_break:not(:first-child) {
+    page-break-before: always;
+}
+.mortgages td:empty {
+    display: none;
+}
+.alip-container div.client-report-data:empty {
+    display: none;
+}
+h1.pdf_title {
+    font-size: 25px !important;
+    font-weight: normal !important;
+    margin-top: -80px !important;
+    /*padding-top: -100px !important;*/
+}

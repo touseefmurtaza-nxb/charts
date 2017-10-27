@@ -1,0 +1,869 @@
+/* Global Elements */
+
+body {
+  margin-top: 0;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+pre {
+  padding: 10px;
+  font-size: 11px;
+}
+legend {
+  font-weight: bold;
+}
+
+a:hover {text-decoration: none;}
+a img {border: 0;}
+
+/* Tables */
+table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+table th {
+  text-align: left;
+  font-weight: bold;
+  padding: 0.1em 0.5em;
+  border: 1px solid #666666;
+  background-color:#ddd;
+}
+table td {
+  padding: 0.1em 0.5em;
+  border: 1px solid #666666;
+}
+table thead th {
+  text-align: center;
+}
+
+
+/* Forms */
+fieldset {
+  display: block;
+  margin: 3px auto;
+  width: 95%;
+}
+fieldset table {
+  width: 99%;
+}
+fieldset table tr td:first-child {
+  padding-right: 1em;
+  text-align: right;
+}
+fieldset table tr td {
+  width: 33%;
+  border: 0;
+}
+label:after {
+  content: ":";
+}
+label.colon-cleanser:after {
+  content: "";
+}
+.required {
+  font-weight: bolder;
+}
+.formError {
+  color: red;
+}
+.fieldWithErrors {
+  color: red;
+}
+div#errorExplanation {
+  padding-left: 5px;
+  margin: 0 80px 2px 80px;
+  background-color: #fee;
+  border: solid 1px #ddd;
+}
+div#errorExplanation h2 {
+  color: red;
+}
+div#errorExplanation h2, div#errorExplanation p {
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;
+}
+div#errorExplanation ul {
+  margin: 0px;
+  padding-left: 15px;
+}
+div#errorExplanation li {
+  font-size: 11px;
+}
+
+fieldset.form_show table tr td:first-child {
+  width: 25%;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 1em;
+}
+
+
+
+/* Global Classes */
+
+.clearfix {
+  display: block;
+  clear: both;
+}
+.borderless td {border: 0px;}
+.borderless {border:0px;}
+.debug, .demo {
+  border: thin dashed #525200;
+}
+.debug, .demo {
+  border: thin dashed #525200;
+}
+
+fieldset.content_section {
+  border: 1px solid #ccc;
+  width: 80%;
+  margin: 1em auto;
+}
+
+fieldset.content_section table {
+  width: auto;
+}
+
+
+
+/* Global Divs */
+
+div#header, #menu, #content, #footer {
+  overflow: hidden;
+}
+div#header_bar {
+  font-size: 20px;
+  height: 40px;
+}
+/* safari and opera need these */
+div#header, #menu, #footer {width: 100%}
+div#header {height: 120px;}
+
+div#logo {
+  width: 300px;
+  float: left;
+  padding-top: 0.2in;
+  background-position: bottom left;
+  height: 40px;
+  position: relative;
+}
+div#login_box {
+  float: right;
+  padding-top: 20px;
+  display: inline;
+}
+div#log {
+  display: inline;
+}
+div#login_box h3 {
+  font-size: 14px;
+}
+div#container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+div#menu {
+  margin-top: -3px;
+}
+#main_menu {
+  position: relative;
+  display: block;
+  height: 39px;
+  font-size: 11px;
+  font-weight: bold;
+  background: transparent url(/images/bg_off.png) repeat-x top left;
+  font-family: Arial, Verdana, Helvitica, sans-serif;
+  border-top: 1px solid #ddd;
+}
+  #main_menu ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    height: 39px;
+  }
+  #main_menu ul li {
+    display: block;
+    float: left;
+    margin: 0;
+    list-style-type: none;
+  }
+  #main_menu ul li a {
+    display: block;
+    float: left;
+    text-decoration: none;
+    padding: 11px 15px 0 15px;
+    height: 23px;
+    background: transparent url(/images/bg_divider.png) no-repeat top right;
+  }
+
+/* Submenus */
+#menu {
+  overflow: visible;
+}
+#main_menu li {
+  position: relative;
+}
+#main_menu .submenu {
+  width: 140px;
+  position: absolute;
+  top: 35px;
+  left: -1px;
+  border-bottom-width: 0;
+  background: none;
+}
+#main_menu .submenu li {
+  width: 100%;
+  margin-top: 0px;
+  height: 30px;
+  display: block;
+  float: none;
+  background: transparent url(/images/bg_off.png) repeat-x top left;
+  border: 1px solid #999;
+  border-top-width: 0;
+  overflow: hidden;
+}
+#main_menu .submenu li a {
+  float: none;
+  height: 39px;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 6px 5px 0 5px;
+}
+#main_menu .submenu li a.current {
+  background: none;
+}
+#main_menu .submenu li a:hover {
+  background: none;
+  background-color: #fff;
+}
+
+div#content {
+  padding-bottom: 5px;
+  width: 100%;
+  float: left;
+  min-height: 150px;
+}
+  #content h1 {
+    font-size: 1.4em;
+    margin: 22px 0 0 0;
+    padding: 10px 10px 3px 2px;
+  }
+  #content h2 {
+    font-weight: bold;
+    font-size: larger;
+    margin: 0;
+    padding: 10px 10px 0 10px;
+  }
+  #content p {
+    font-size: 0.9em;
+    margin: 3px 0 10px;
+  }
+  #content p.q {
+    font-weight: bolder;
+  }
+  #content .pdf_logo {
+    display: none;
+  }
+
+div#footer {
+  clear: left;
+  text-align: center;
+  padding: 5px 0px 35px 0px;
+  line-height: 25px
+}
+  div#footer_links {
+    font-size: 0.9em;
+  }
+  div#footer_links li {
+    display: inline;
+  }
+  div#footer_links li {
+    padding: 0 0.5em;
+  }
+  div#footer_links li:first-child {
+    border: none;
+  }
+  div#copy_right {
+    font-size: 0.9em;
+  }
+
+/* Flash */
+.flash_hash {
+  background-color: #fbff73;
+  line-height: 180%;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 1em;
+}
+#notice {
+  color: green;
+}
+#error {
+  color: red;
+}
+
+div#loading div#fade {
+  background: white;
+  position: fixed;
+  top: 0;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+}
+div#loading div#message {
+  background: white;
+  text-align: center;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  width: 400px;
+  margin-left: -200px;
+}
+div#loading div#message p {
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+div.map_report {
+  text-align: center;
+}
+div.map_report table {
+  margin: 1px;
+}
+div.map_report_column {
+  float: left;
+  width: 50%;
+}
+div.map_report_column table tr td:first-child:after {
+  content: ":";
+}
+div.map_report_column fieldset {
+  width: 90%;
+}
+
+#edit_financial_map table {
+  margin-left: 1px;
+}
+table.edit_financial {
+  border-collapse: collapse;
+  width: 99%;
+  margin-left: 1px;
+  border: thin solid #959595;
+}
+th.edit_financial {
+  border: thin solid #959595;
+  background-color: #e4e4e4;
+  font-weight: bolder;
+}
+td.edit_financial {
+  border: thin solid #959595;
+  background-color: #ececec;
+}
+.options {text-align: right}
+
+.good {
+  color: green;
+}
+.bad {
+  color: red;
+}
+
+/* Tooltips */
+a.tip {
+	position: relative;
+}
+
+a.tip img {
+  padding-right: 5px;
+  padding-bottom: 3px;
+}
+
+a.tip span {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 25px;
+	width: 220px;
+	padding: 5px;
+	margin: 0;
+	background: #ffc;
+	border: 1px solid #aa9;
+	font-weight: normal;
+	color: #000;
+	font-size: 12px;
+	-moz-border-radius: 5px; /* this works only in camino/firefox */
+	-webkit-border-radius: 5px; /* this is just for Safari */
+    text-align: left;
+}
+
+a:hover.tip {
+	font-size: 99%; /* this is just for IE */
+	z-index: 100;
+}
+
+a:hover.tip span {
+	display: block;
+}
+
+tr.lump-sum td.notes {
+  color: red;
+}
+
+fieldset.report p {
+  text-align: center;
+}
+fieldset.report table td {
+  border: thin solid #959595;
+  width: auto;
+  font-weight: normal;
+  text-align: left;
+}
+fieldset.report table td:first-child {
+  width: auto;
+  text-align: left;
+}
+fieldset.report table tr.possible-payoff td {
+  font-weight: bolder;
+}
+.column {
+  float: left;
+  width: 48%
+}
+
+.column2 {
+  float: right;
+}
+
+div.chart img { 
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 1em;
+  border: thin solid #959595;
+}
+
+fieldset.report {
+  margin-bottom: 1em;
+}
+
+table td.spacer {
+  border: none !important;
+}
+
+ul.tasks li {
+  list-style-type: none;
+}
+.task-completed {
+  text-decoration: line-through;
+}
+
+#events-table {
+  width: 100%;
+}
+#event-header {
+  text-align: center;
+  font-size: larger;
+  padding: 3px;
+}
+#event-header span {
+  font-weight: bolder;
+  font-size: larger;
+}
+#event-header a.previous {
+  float: left;
+}
+#event-header a.next {
+  float: right;
+}
+
+.action-buttons {
+  float: right;
+}
+.handsontable th{
+  font-weight: bold !important;
+}
+.edit_financial.options{
+  width: 100px;
+}
+table.no-border td{
+  border: none !important;
+}
+table.no-border tr td:first-child {
+  text-align: right;
+}
+.client_information{
+  display: none;
+}
+
+.page-break{
+  page-break-before: always !important;
+  clear: both !important;
+}
+.page-break-after{
+    page-break-after: always !important;
+    clear: both !important;
+}
+#discretionary_income_form .tip span, #edit-financial-overview .top_tooltip span, .new_map_lump_sum_tooltip a span, #edit-financial-credit-card h2 a span
+{
+    top: inherit !important;
+    bottom: 0 !important;
+}
+.coming-soon-text{
+    margin: 2em 0;
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    /*font-family: "verdana, arial, helvetica, sans-serif";*/
+    padding-bottom: 10px;
+
+}
+.new_map_action_type{
+    position: absolute; top: 3px; right: -64px;
+}
+.new_map_action_type span{
+    width: 170px !important;
+}
+.relative_position{position: relative;}
+.new_action_notice a{
+    bottom: 12px;
+    text-decoration: none !important;
+}
+.credit_card_help{
+    position: absolute;
+    left: 49%;
+    top: 28px;
+}
+.tooltip_to_top{
+    top: inherit !important;
+    bottom: 0 !important;
+}
+/*edit financial fieldset*/
+fieldset.edit_financial_fieldset {
+    display: block;
+    margin: 15px 0;
+    width: 97%;
+}
+.edit_financial_fieldset{
+    display: block;
+    margin: 20px 0px;
+    width: 97%;
+    border: 2px groove threedface;
+    padding: 15px 5px 25px 5px;
+    position: relative;
+}
+.edit_financial_fieldset .custom_legend{
+    top: -10px;
+    position: absolute;
+    background-color: white;
+    color: #ef4623;
+    font-weight: bold;
+    display: block;
+    padding: 0px 2px;
+    font-size: larger;
+}
+.client_tutorial{
+    margin: 0px !important;
+    padding: 15px 0 0 0 !important;
+}
+.client_tutorial a{
+    color: #2a94be !important;
+}
+.box_image img{
+    height: 100px !important;
+    float: left;
+    margin: 25px;
+    border-radius: 3px;
+}
+.tutorial-img-container ul{
+    list-style-type: none;
+    padding-left: 5px;
+}
+.getting-start-img img{
+    height: 100px;
+    border-radius: 3px !important;
+    margin: 35px 1px;
+}
+.hidden{
+    display: none;
+}
+#add-additional-debts, #add-additional-mortgage{
+    color: #2a94be !important;
+}
+#analysis-cal-img img{
+    height: 122px !important;
+    margin-bottom: 18px;
+}
+#analysis-cal-img img:first-child{
+    margin-right: 12px;
+}
+
+table.no-border-table td{
+    border: 0px !important;
+}
+.no-top-margin{
+    margin-top:0px !important;
+}
+.free_analysis_form_cont{
+    margin-bottom: 10px;
+}
+.disclaimer_analysis{
+    text-align: left; margin-top: 55px !important; font-size: 0.8em !important;
+}
+.custom_analysis_para{
+    font-size: 1.2em !important;
+}
+#add-more-mortgages{
+    text-align: right;
+    padding-right: 7px;
+    font-weight: bold;
+}
+fieldset.free_analysis{
+    margin-top: 10px;
+}
+.mortgage-report-cont{
+    margin: 5px 0px 20px 0px !important;
+}
+.mortgage-report-cont legend{
+    font-size: 15px !important;
+}
+/*tutorial page*/
+.with-submenu-arrow{
+    position: relative;
+    background: none !important;
+}
+
+.with-submenu-arrow img{
+    position: absolute;
+    width: 48px;
+    top: -7px;
+}
+.start-here-txt{
+    color: #8e0303 !important;
+    margin: 8px 10px 0px 53px;
+    font-size: 16px;
+    font-weight: bold;
+}
+/*custom css*/
+.set-tip-notice .tip{
+    bottom: 20px !important;
+}
+/* end custom css*/
+
+
+div.container_marketing {
+  padding-top: 40px !important;
+}
+table#dashboard_top tr.dashboard_tbl_heading th{
+    font-size: 14px !important;
+}
+table#dashboard_top tr td.dashboard_tbl_col1{
+    width: 36% !important;
+    padding-right: 5px !important;
+}
+table#dashboard_top tr td.dashboard_tbl_col{
+    width: 32% !important;
+    padding-right: 5px !important;
+}
+.left_align_text{
+    text-align: left !important;
+}
+
+.edit_financial_fieldset h2 .tip span, .new_financial_fieldset h2 .tip span, h1 .tip span, #content h2 .tip span{
+  width: 350px !important;
+}
+
+.handsontable .wtHolder{
+  height: 750px !important;
+  overflow: visible !important;
+
+}
+
+h4.alip_agent_tabel .tip span, .alip_table_title .tip span{
+  top: inherit !important;
+  bottom: 0 !important;
+  width: 350px !important;
+}
+.alip_table_submit_button {
+  float: left;
+  padding: 0 5px 10px 0px ;
+}
+
+#content .future_investments_hd .tip span{
+  width: 400px !important;
+}
+
+#dashboard_top table tr td {
+  text-align: left !important;
+}
+.no_link_background a{
+    background: none !important;
+}
+/* start financial calculator */
+#ss_menu {
+    width: 100%;
+    margin: 30px 0px;
+}
+
+.ss_button {
+    background-color: #fff;
+    border: thin solid #959595;
+    border-bottom: 1px solid #FFFFFF;
+    cursor: pointer;
+    padding: 10px;
+    color: #000;
+}
+.ss_heading {
+    background-color: #e4e4e4;
+    border: thin solid #959595;
+    border-bottom: 1px solid #FFFFFF;
+    cursor: pointer;
+    padding: 10px;
+    color: #000;
+}
+
+.ss_cal_content {
+    background-color: #fff;
+    border: thin solid #959595;
+    border-bottom: 1px solid #FFFFFF;
+    display: none;
+    padding: 10px;
+}
+
+#calculator_container{
+    text-align: center;
+    margin: 30px;
+}
+.cal_last_div_border{
+    border-bottom: thin solid #959595;
+}
+.calculator_sub_container a{
+    color: #000 !important;
+    text-decoration: none;
+}
+.calculator_sub_container h2{
+    padding: 15px 10px !important
+}
+
+/* end financial calculator */
+
+/*start: inline editing styles */
+.in_line_editable input{
+    max-width: 400px;
+    border-radius: 2px;
+}
+.in_line_editable button{
+    border-radius: 4px;
+    margin-left: 5px;
+    padding: 2px 5px;
+}
+.in_line_editable{
+    display: inline;
+}
+
+/*end: inline editing styles */
+/* pop up videos */
+#watch_video-dialog .modal-header .close{
+    font-size: 15px !important;
+    margin-top: 5px; !important;
+}
+/* end  pop up videos */
+.credit-score-link {
+    width: 50%;
+    margin: 2em 0;
+    text-align: center;
+    float: left;
+}
+
+.credit-coming-soon-text
+{
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    /*font-family: "verdana, arial, helvetica, sans-serif";*/
+    padding-bottom: 10px;
+}
+
+.marketing_heading{
+    display: inline-block !important;
+}
+div.recommend_balance_deposit {
+    background-color: #fbff73;
+    color: #000;
+    text-align: center;
+    font-size: 12px;
+}
+/*ALIP Report section*/
+.possible-payoff .tooltip_editable{
+  top: 16px !important;
+  left: -216px !important;
+}
+
+div.reconcile-recommended-temp {
+  margin: 0 15%;
+  color: #000;
+  line-height: 180%;
+  text-align: center;
+}
+.map_action_kind{
+  width: 100% !important;
+}
+.map_action_kind a.tip span{
+  left: -180px !important;
+}
+.show_important{
+  display: block !important;
+}
+.share_maps_map_report_table_income_expenses_th a span {
+  right: 26px !important;
+  left: -232px !important;
+}
+
+.lift_tooltip{
+  top: -25px !important;
+}
+#share_maps_map_report_debts_ballon_payment_mortgage_tt {
+  top: 15px;
+  left: -145px;
+}
+
+.exisiting_map_actions_colors{
+  color: #c4c4c4;
+}
+
+.gray_color{
+  color: gray;
+}
+
+.title_and_accomplishments p{
+  margin-top: 0px;
+}
+#main_dashboard_drop_down_tt {
+  left: -206px;
+  top: 15px;
+}
+#main_report_drop_down_tt{
+  left: -206px;
+  top: 15px;
+}
+#franchisee_uploaded_data {
+  width: 61% !important;
+}
+#agent_uploaded_data{
+  width: 61% !important;
+}
+#loc_negative_text_tt {
+  left: -10px;
+  top: 15px;
+}
+#wa_account_table_negativ_value_tt {
+  top: 10px;
+  left: -70px;
+}
