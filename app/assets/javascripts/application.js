@@ -15,5 +15,7 @@
 //= require twitter/bootstrap
 //= require moment
 //= require bootstrap-datetimepicker
+//= require highcharts
+//= require exporting
 //= require rails-ujs
 //= require turbolinks

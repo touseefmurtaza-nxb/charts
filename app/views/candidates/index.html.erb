@@ -19,7 +19,7 @@
         <td><%= link_to candidate.id, candidate_path(candidate) %></td>
         <td><%= candidate.name %></td>
         <td><%= candidate.email %></td>
-        <td><%=l candidate.interview_date %></td>
+        <td><%=l candidate.interview_date rescue nil   %></td>
         <td><%= link_to "View Report", report_candidates_path %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
