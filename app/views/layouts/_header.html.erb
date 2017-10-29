@@ -7,18 +7,21 @@
       <li class="active"><a href="/">Home</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Register <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
-      </li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#"><span class="glyphicon glyphicon-edit"></span> Edit Profile</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-        </ul>
-      </li>
+      <% if user_signed_in? %>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/users/edit"><span class="glyphicon glyphicon-edit"></span> Edit Profile</a></li>
+            <li><a href="/users/sign_out"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          </ul>
+        </li>
+      <% else %>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Register <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </li>
+      <% end %>
     </ul>
   </div>
 </nav>
