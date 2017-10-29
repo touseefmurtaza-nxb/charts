@@ -28,13 +28,11 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
 gem 'therubyracer'
 gem 'less-rails'
-gem 'jquery-ui-rails'
-gem 'momentjs-rails', '>= 2.9.0'
-gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 group :development do
   gem 'pry-rails'
   gem 'pry-rescue'
