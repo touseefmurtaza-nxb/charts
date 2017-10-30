@@ -61,6 +61,14 @@ class CandidatesController < ApplicationController
   end
 
   def report
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf:                        'file_name',
+           show_as_html:                    params.key?('debug'),
+           layout:                          'layouts/pdf.html.erb'
+      end
+    end
   end
 
   private

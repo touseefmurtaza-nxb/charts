@@ -40,3 +40,7 @@ end
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
+gem 'wicked_pdf'
+# gem 'wkhtmltopdf-binary-edge'
+# gem 'wkhtmltopdf-binary'
+gem 'wkhtmltopdf-binary'
