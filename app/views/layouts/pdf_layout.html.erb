@@ -5,7 +5,7 @@
   <%= wicked_pdf_stylesheet_link_tag "pdf_application", media: "all", "data-turbolinks-track" => true %>
   <%= wicked_pdf_javascript_include_tag "application" %>
 </head>
-<body onload=''>
+<body onload='', class="pdf_page-border">
 <div id="header">
   <%#= image_tag wicked_pdf_asset_base64('logo.png') %>
 </div>

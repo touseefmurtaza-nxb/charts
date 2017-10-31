@@ -64,34 +64,23 @@ class CandidatesController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render pdf:          'file_name',
-           show_as_html:     params.key?('debug'),
-           layout:           'layouts/pdf.html.erb',
-               :javascript_delay   => 1000,
-               :disable_javascript => false,
-               :dpi          => '100',
-               font_name:       'Times New Roman',
-               :margin       => {:top    => 30,
-                                 :bottom => 10,
-                                 :left   => 10,
-                                 :right  => 10
-               },
-               :footer       => {
-                   :margin    => {:top    => 30,
-                                  :bottom => 10,
-                                  :left   => 10,
-                                  :right  => 10
-                   },
-                   :padding =>{
-
-                   },
-                   font_size: 8,
-                   :line      => true,
-                   :right     => ' Page [page] of [topage]', :left => "Print Date & Time: #{Time.now.strftime('%d/%m/%Y %I:%M %p')}", :center => "Top3DowntimeCauseInMinutes"
-                   # }
-               },
-
-               show_as_html: false
+        render :pdf             => 'Assessment Report',
+           :show_as_html        => params.key?('debug'),
+           :layout              => 'pdf_layout.html',
+           :template            => 'candidates/report.pdf',
+           :javascript_delay    => 1000,
+           :disable_javascript  => false,
+           :dpi                 => '100',
+           :font_name           => 'Times New Roman',
+           :margin              => {:top    => 80,
+                                    :bottom => 0,
+                                    :left   => 0,
+                                    :right  => 0
+                                   },
+           :header       => {:html    => {:template => 'layouts/pdf_header.html.erb',
+                                          :locals   => {:heading_content => "From This To This", :heading_title => "Top 3 Downtime Causes In Minutes", :site_name => "Resume Assessment"}
+                                         }
+           }
       end
     end
   end

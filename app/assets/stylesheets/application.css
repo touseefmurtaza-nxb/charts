@@ -24,3 +24,7 @@ body{
 .no-border-radius{
     border-radius: 0px !important;
 }
+
+.pdf_page-border {
+    border: 1px solid red;
+}

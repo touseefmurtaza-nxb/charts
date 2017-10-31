@@ -1,0 +1,16 @@
+<div class="pdf_header">
+  <section>
+    <%= wicked_pdf_image_tag 'logo.png' %>
+  </section>
+  <h2 class="<%= (extra_class rescue '') %>">
+    <%= heading_title %>
+  </h2>
+  <h2 class="<%= (extra_class rescue '') %>">
+    <%= heading_content.html_safe %>
+  </h2>
+  <h2 class="<%= (extra_class rescue '') %>">
+    <%= site_name.html_safe %>
+    <br/>
+    <div class="height10"></div>
+  </h2>
+</div>

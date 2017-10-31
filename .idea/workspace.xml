@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cc77967-d8c3-4917-99b9-71c795f1aad0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/highcharts.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/highcharts.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/logo.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/pdf_layout.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/candidates_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/candidates_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/candidates/report.pdf.erb" afterPath="$PROJECT_DIR$/app/views/candidates/report.pdf.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -27,28 +26,65 @@
       <file leaf-file-name="candidates_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/candidates_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1656">
-              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state relative-caret-position="563">
+              <caret line="82" column="12" lean-forward="false" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pdf.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf.html.erb">
+      <file leaf-file-name="pdf_header.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf_header.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="36">
+              <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="report.pdf.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pdf_layout.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf_layout.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="report.pdf.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/candidates/report.pdf.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="56" lean-forward="false" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#213#385#0#HTML" expanded="false" />
+                <element signature="e#402#434#0#HTML" expanded="false" />
+                <element signature="e#453#537#0#HTML" expanded="false" />
+                <element signature="e#560#1134#0#HTML" expanded="false" />
+                <element signature="e#1153#1751#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -121,7 +157,6 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css.less" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
@@ -130,7 +165,6 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/users/registrations/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/app/views/candidates/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/mime_types.rb" />
@@ -140,8 +174,12 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/pdf.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/pdf_header.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/candidates_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/candidates/report.pdf.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/pdf_layout.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
       </list>
     </option>
   </component>
@@ -152,8 +190,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="61" />
-    <option name="y" value="24" />
+    <option name="x" value="67" />
+    <option name="y" value="34" />
     <option name="width" value="1539" />
     <option name="height" value="876" />
   </component>
@@ -199,13 +237,7 @@
               <item name="charts" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="charts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="charts" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="charts" type="b2602c69:ProjectViewProjectNode" />
@@ -237,8 +269,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resume" />
-    <property name="SearchEverywhereHistoryKey" value="gemfile&#9;FILE&#9;file:///www/projects/charts/Gemfile&#10;routes&#9;FILE&#9;file:///www/projects/charts/config/routes.rb&#10;candidate&#9;FILE&#9;file:///www/projects/charts/app/controllers/candidates_controller.rb&#10;mime&#9;FILE&#9;file:///www/projects/charts/config/initializers/mime_types.rb&#10;user&#9;FILE&#9;file:///www/projects/charts/app/models/user.rb&#10;_form&#9;FILE&#9;file:///www/projects/charts/app/views/candidates/_form.html.erb&#10;db/migrate/20171029101740_add_devise_to_users.rb&#9;FILE&#9;file:///www/projects/charts/db/migrate/20171029101740_add_devise_to_users.rb&#10;applica&#9;FILE&#9;file:///www/projects/charts/app/controllers/application_controller.rb&#10;application&#9;FILE&#9;file:///www/projects/charts/app/controllers/application_controller.rb&#10;devise&#9;FILE&#9;file:///www/projects/charts/config/initializers/devise.rb&#10;_header&#9;FILE&#9;file:///www/projects/charts/app/views/layouts/_header.html.erb&#10;application.htm&#9;FILE&#9;file:///www/projects/charts/app/views/layouts/application.html.erb&#10;application.html&#9;FILE&#9;file:///www/projects/charts/app/views/layouts/application.html.erb&#10;gitigno&#9;FILE&#9;file:///www/projects/charts/.gitignore&#10;candidate.rb&#9;FILE&#9;file:///www/projects/charts/app/controllers/candidates_controller.rb&#10;cand&#9;FILE&#9;file:///www/projects/charts/app/controllers/candidates_controller.rb&#10;asse&#9;FILE&#9;file:///www/projects/charts/config/initializers/assets.rb&#10;ass&#9;FILE&#9;file:///www/projects/charts/config/initializers/assets.rb&#10;candi&#9;null&#9;null&#10;Gemfile&#9;FILE&#9;file:///www/projects/charts/Gemfile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nyt" />
+    <property name="SearchEverywhereHistoryKey" value="sty&#9;FILE&#9;file:///www/projects/charts/app/assets/stylesheets/style.css&#10;gemfile&#9;FILE&#9;file:///www/projects/charts/Gemfile&#10;routes&#9;FILE&#9;file:///www/projects/charts/config/routes.rb&#10;candidate&#9;FILE&#9;file:///www/projects/charts/app/controllers/candidates_controller.rb&#10;mime&#9;FILE&#9;file:///www/projects/charts/config/initializers/mime_types.rb&#10;user&#9;FILE&#9;file:///www/projects/charts/app/models/user.rb&#10;_form&#9;FILE&#9;file:///www/projects/charts/app/views/candidates/_form.html.erb&#10;db/migrate/20171029101740_add_devise_to_users.rb&#9;FILE&#9;file:///www/projects/charts/db/migrate/20171029101740_add_devise_to_users.rb&#10;applica&#9;FILE&#9;file:///www/projects/charts/app/controllers/application_controller.rb&#10;application&#9;FILE&#9;file:///www/projects/charts/app/controllers/application_controller.rb&#10;devise&#9;FILE&#9;file:///www/projects/charts/config/initializers/devise.rb&#10;_header&#9;FILE&#9;file:///www/projects/charts/app/views/layouts/_header.html.erb&#10;application.htm&#9;FILE&#9;file:///www/projects/charts/app/views/layouts/application.html.erb&#10;application.html&#9;FILE&#9;file:///www/projects/charts/app/views/layouts/application.html.erb&#10;gitigno&#9;FILE&#9;file:///www/projects/charts/.gitignore&#10;candidate.rb&#9;FILE&#9;file:///www/projects/charts/app/controllers/candidates_controller.rb&#10;cand&#9;FILE&#9;file:///www/projects/charts/app/controllers/candidates_controller.rb&#10;asse&#9;FILE&#9;file:///www/projects/charts/config/initializers/assets.rb&#10;ass&#9;FILE&#9;file:///www/projects/charts/config/initializers/assets.rb&#10;candi&#9;null&#9;null&#10;Gemfile&#9;FILE&#9;file:///www/projects/charts/Gemfile" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
   </component>
   <component name="RecentsManager">
@@ -384,10 +416,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46590000" />
+    <option name="totallyTimeSpent" value="51971000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="61" y="24" width="1545" height="912" extended-state="6" />
+    <frame x="57" y="-4" width="1543" height="904" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21192482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -428,11 +460,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css.scss" />
     <entry file="file://$USER_HOME$/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/matrix/lup_decomposition.rb" />
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/candidates.coffee">
       <provider selected="true" editor-type-id="text-editor">
@@ -593,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
@@ -611,13 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -713,26 +732,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/candidates_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1656">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state relative-caret-position="36">
+          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/candidates_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="563">
+          <caret line="82" column="12" lean-forward="false" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/candidates/report.pdf.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="56" lean-forward="false" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#213#385#0#HTML" expanded="false" />
+            <element signature="e#402#434#0#HTML" expanded="false" />
+            <element signature="e#453#537#0#HTML" expanded="false" />
+            <element signature="e#560#1134#0#HTML" expanded="false" />
+            <element signature="e#1153#1751#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf_layout.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
           <folding />
         </state>
       </provider>
