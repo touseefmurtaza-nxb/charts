@@ -78,7 +78,7 @@ class CandidatesController < ApplicationController
                                     :right  => 0
                                    },
            :header       => {:html    => {:template => 'layouts/pdf_header.html.erb',
-                                          :locals   => {:heading_content => "From This To This", :heading_title => "Top 3 Downtime Causes In Minutes", :site_name => "Resume Assessment"}
+                                          :locals   => {:heading_content => "", :heading_title => "Ripton Solutions", :site_name => "Resume Assessment"}
                                          }
            }
       end
