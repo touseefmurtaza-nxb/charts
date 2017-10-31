@@ -2,15 +2,12 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-
+  <%= wicked_pdf_stylesheet_link_tag "pdf_application", media: "all", "data-turbolinks-track" => true %>
+  <%= wicked_pdf_javascript_include_tag "application" %>
 </head>
 <body onload=''>
 <div id="header">
-  <%= image_tag wicked_pdf_asset_base64('logo.png') %>
+  <%#= image_tag wicked_pdf_asset_base64('logo.png') %>
 </div>
 <div id="content">
   <%= yield %>

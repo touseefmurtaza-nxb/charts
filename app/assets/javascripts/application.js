@@ -16,5 +16,5 @@
 //= require jquery.datetimepicker.full
 //= require twitter/bootstrap
 //= require highcharts
-//= require exporting
+// require exporting
 //= require turbolinks

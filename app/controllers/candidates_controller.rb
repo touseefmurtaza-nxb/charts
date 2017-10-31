@@ -64,9 +64,34 @@ class CandidatesController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render pdf:                        'file_name',
-           show_as_html:                    params.key?('debug'),
-           layout:                          'layouts/pdf.html.erb'
+        render pdf:          'file_name',
+           show_as_html:     params.key?('debug'),
+           layout:           'layouts/pdf.html.erb',
+               :javascript_delay   => 1000,
+               :disable_javascript => false,
+               :dpi          => '100',
+               font_name:       'Times New Roman',
+               :margin       => {:top    => 30,
+                                 :bottom => 10,
+                                 :left   => 10,
+                                 :right  => 10
+               },
+               :footer       => {
+                   :margin    => {:top    => 30,
+                                  :bottom => 10,
+                                  :left   => 10,
+                                  :right  => 10
+                   },
+                   :padding =>{
+
+                   },
+                   font_size: 8,
+                   :line      => true,
+                   :right     => ' Page [page] of [topage]', :left => "Print Date & Time: #{Time.now.strftime('%d/%m/%Y %I:%M %p')}", :center => "Top3DowntimeCauseInMinutes"
+                   # }
+               },
+
+               show_as_html: false
       end
     end
   end
