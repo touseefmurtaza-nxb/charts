@@ -32,6 +32,34 @@
     </div>
   </div>
 
+
+
+
+
+
+
+
+  <div class="form-group">
+    <%= f.label :work_experiences, :class => 'control-label col-lg-2' %>
+    <%= f.fields_for :work_experiences do |a| %>
+        <p>From Date: <%= a.text_field :from_date %></p>
+        <p>To Date: <%= a.text_field :to_date %></p>
+        <p>Description: <%= a.text_area :description %></p>
+    <% end %>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
       <%= f.submit nil, :class => 'btn btn-primary' %>
