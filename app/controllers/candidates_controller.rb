@@ -72,13 +72,8 @@ class CandidatesController < ApplicationController
            :disable_javascript  => false,
            :dpi                 => '100',
            :font_name           => 'Times New Roman',
-           :margin              => {:top    => 80,
-                                    :bottom => 0,
-                                    :left   => 0,
-                                    :right  => 0
-                                   },
            :header       => {:html    => {:template => 'layouts/pdf_header.html.erb',
-                                          :locals   => {:heading_content => "", :heading_title => "", :site_name => ""}
+                                          :locals   => {:comp_address => "350 G-III Johar Town Lahore", :web => "www.nextbridge.pk"}
                                          }
            }
       end

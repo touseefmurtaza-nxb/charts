@@ -246,7 +246,7 @@ DEPENDENCIES
   pry-rescue
   puma (~> 3.7)
   rails (~> 5.1.4)
-  sass-rails (~> 5.0)
+  sass-rails (~> 5.0, >= 5.0.6)
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -260,5 +260,8 @@ DEPENDENCIES
   wicked_pdf
   wkhtmltopdf-binary
 
+RUBY VERSION
+   ruby 2.2.6p396
+
 BUNDLED WITH
-   1.15.4
+   1.16.0
