@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cc77967-d8c3-4917-99b9-71c795f1aad0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/candidates_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/candidates_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/candidates/report.html.erb" afterPath="$PROJECT_DIR$/app/views/candidates/report.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/candidates/report.pdf.erb" afterPath="$PROJECT_DIR$/app/views/candidates/report.pdf.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -22,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="candidates_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="candidates_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/candidates_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="491">
-              <caret line="80" column="77" lean-forward="false" selection-start-line="80" selection-start-column="77" selection-end-line="80" selection-end-column="77" />
+              <caret line="80" column="117" lean-forward="false" selection-start-line="80" selection-start-column="117" selection-end-line="80" selection-end-column="117" />
               <folding />
             </state>
           </provider>
@@ -42,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="report.pdf.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="report.pdf.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/candidates/report.pdf.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -144,8 +140,8 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/candidates/report.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/candidates_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/candidates/report.pdf.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/candidates_controller.rb" />
       </list>
     </option>
   </component>
@@ -385,12 +381,12 @@
       <workItem from="1509250364061" duration="13436000" />
       <workItem from="1509269832925" duration="7688000" />
       <workItem from="1509382160149" duration="8744000" />
-      <workItem from="1509465704464" duration="2773000" />
+      <workItem from="1509465704464" duration="3982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54744000" />
+    <option name="totallyTimeSpent" value="55953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="34" width="1315" height="780" extended-state="6" />
@@ -709,14 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/candidates_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="80" column="77" lean-forward="false" selection-start-line="80" selection-start-column="77" selection-end-line="80" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/pdf_layout.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -734,6 +722,14 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="e#253#1831#0#HTML" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/candidates_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="80" column="117" lean-forward="false" selection-start-line="80" selection-start-column="117" selection-end-line="80" selection-end-column="117" />
+          <folding />
         </state>
       </provider>
     </entry>
