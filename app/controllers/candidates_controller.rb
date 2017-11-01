@@ -15,6 +15,7 @@ class CandidatesController < ApplicationController
   # GET /candidates/new
   def new
     @candidate = Candidate.new
+    @candidate.work_experiences.build
   end
 
   # GET /candidates/1/edit

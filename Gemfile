@@ -37,6 +37,7 @@ gem 'less-rails'
 group :development do
   gem 'pry-rails'
   gem 'pry-rescue'
+  gem 'annotate'
 end
 
 gem 'bootstrap-sass', '~> 3.3.6'
