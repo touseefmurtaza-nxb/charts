@@ -1,10 +1,13 @@
-<%= f.label :from_date %>
-<%= f.text_field :from_date %>
+<%= f.label :work_experience, :class => 'control-label col-lg-2' %>
+<div class="col-sm-2">
+  <%= f.text_field :from_date, :class => 'form-control datepicker', :placeholder => "From Date" %>
+</div>
 
-<%= f.label :to_date %>
-<%= f.text_field :to_date %>
+<div class="col-sm-2">
+  <%= f.text_field :to_date, :class => 'form-control datepicker', :placeholder => "To Date" %>
+</div>
 
-<%= f.label :description %>
-<%= f.text_area :description %>
-
-<%= f.check_box :_destroy %> Delete
+<div class="col-md-6">
+  <%= f.text_area :description, :class => 'form-control', :placeholder => "Enter Job Description..." %>
+  <%= f.check_box :_destroy %> Delete
+</div>

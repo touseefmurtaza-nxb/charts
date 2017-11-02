@@ -37,10 +37,12 @@
     <%= f.fields_for :work_experiences, @candidate.work_experiences do |we| %>
         <%= render 'work_experience', f: we %>
     <% end %>
-    <%= link_to_add_fields "Add Experience", f, :work_experience %>
   </div>
 
-
+  <div class="form-group">
+    <%= link_to_add_fields "Add Experience", f, :work_experiences %>
+    </div>
+  </div>
 
 
   <div class="form-group">
@@ -54,18 +56,26 @@
 <% end %>
 
 <script>
-    $( function() {
-        $( "input.datepicker" ).datetimepicker({
-            dateFormat: "mm/dd/yy",
-            altFormat: "yy-mm-dd"
-        });
-        $( "#candidate_work_experiences_attributes_0_from_date" ).datetimepicker({
-            dateFormat: "mm/dd/yy",
-            altFormat: "yy-mm-dd"
-        });
-        $( "#candidate_work_experiences_attributes_0_to_date" ).datetimepicker({
-            dateFormat: "mm/dd/yy",
-            altFormat: "yy-mm-dd"
-        });
-    } );
+  $(function(){
+      $( "input.datepicker" ).datetimepicker({
+          dateFormat: "mm/dd/yy",
+          altFormat: "yy-mm-dd"
+      });
+      // $("input.datepicker").click(function(){
+      //   $(this).datetimepicker();
+      // });
+      $('form').on('click', '.remove_fields', function(event) {
+          $(this).prev('input[type=hidden]').val('1');
+          $(this).closest('fieldset').hide();
+          return event.preventDefault();
+      });
+
+      $('form').on('click', '.add_fields', function(event) {
+          var regexp, time;
+          time = new Date().getTime();
+          regexp = new RegExp($(this).data('id'), 'g');
+          $(this).before($(this).data('fields').replace(regexp, time));
+          return event.preventDefault();
+      });
+  });
 </script>
