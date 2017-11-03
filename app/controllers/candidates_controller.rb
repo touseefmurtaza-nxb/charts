@@ -81,19 +81,25 @@ class CandidatesController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render :pdf             => 'Assessment Report',
-           :show_as_html        => params.key?('debug'),
-           :layout              => 'pdf_layout.html',
-           :template            => 'candidates/report.pdf',
-           :javascript_delay    => 1000,
-           :disable_javascript  => false,
-           :dpi                 => '100',
-           :font_name           => 'Times New Roman',
-           :header       => {:html    => {:template => 'layouts/pdf_header.html.erb',
-                                          :locals   => {:comp_address => "350 G-III Johar Town Lahore", :web => "www.nextbridge.pk"}
-                                         }
-           }
-      end
+          pdf = CombinePDF.new
+          pdf2 = render_to_string pdf: "Report.pdf", template: "candidates/report.pdf", layout: 'pdf_layout.html', encoding: "UTF-8"
+          pdf << CombinePDF.new(pdf2)
+          pdf << CombinePDF.new(Resume.last.cv.path)
+          send_data pdf.to_pdf, :disposition => 'inline', :type => "application/pdf"
+        end
+        # render :pdf             => 'Assessment Report',
+        #    :show_as_html        => params.key?('debug'),
+        #    :layout              => 'pdf_layout.html',
+        #    :template            => 'candidates/report.pdf',
+        #    :javascript_delay    => 1000,
+        #    :disable_javascript  => false,
+        #    :dpi                 => '100',
+        #    :font_name           => 'Times New Roman',
+        #    :header       => {:html    => {:template => 'layouts/pdf_header.html.erb',
+        #                                   :locals   => {:comp_address => "350 G-III Johar Town Lahore", :web => "www.nextbridge.pk"}
+        #                                  }
+        #    }
+      # end
     end
   end
 
