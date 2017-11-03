@@ -15,5 +15,6 @@ class Candidate < ApplicationRecord
   validates :email, uniqueness: true
 
   has_many :work_experiences, dependent: :destroy
+  has_one :resume
   accepts_nested_attributes_for :work_experiences, reject_if: :all_blank, allow_destroy: true
 end

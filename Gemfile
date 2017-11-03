@@ -38,9 +38,12 @@ group :development do
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'annotate'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+gem 'paperclip', '~> 5.0.0'

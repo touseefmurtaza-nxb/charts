@@ -14,8 +14,10 @@ class CandidatesController < ApplicationController
 
   # GET /candidates/new
   def new
+    logger.info "Processing the request New..."
     @candidate = Candidate.new
     @candidate.work_experiences.build
+    @candidate.build_resume
   end
 
   # GET /candidates/1/edit
@@ -26,6 +28,11 @@ class CandidatesController < ApplicationController
   # POST /candidates.json
   def create
     @candidate = Candidate.new(candidate_params)
+    if params[:candidate][:resume][:cv].present?
+      resume = @candidate.build_resume
+      resume.cv = resume_params
+      resume.save!
+    end
     respond_to do |format|
       if @candidate.save
         format.html { redirect_to @candidate, notice: 'Candidate was successfully created.' }
@@ -42,6 +49,15 @@ class CandidatesController < ApplicationController
   def update
     respond_to do |format|
       if @candidate.update(candidate_params)
+        if params[:candidate][:resume][:cv].present?
+          if @candidate.resume.nil?
+            resume = @candidate.build_resume
+            resume.cv = resume_params
+            resume.save!
+          else
+            @candidate.resume.update(cv: resume_params)
+          end
+        end
         format.html { redirect_to @candidate, notice: 'Candidate was successfully updated.' }
         format.json { render :show, status: :ok, location: @candidate }
       else
@@ -90,5 +106,9 @@ class CandidatesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def candidate_params
       params.require(:candidate).permit(:name, :email, :interview_date, work_experiences_attributes: [:id, :from_date, :to_date, :description, :_destroy])
+    end
+
+    def resume_params
+      params[:candidate][:resume][:cv]
     end
 end

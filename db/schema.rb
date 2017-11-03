@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171101115348) do
+ActiveRecord::Schema.define(version: 20171103063036) do
 
   create_table "candidates", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.datetime "interview_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "resumes", force: :cascade do |t|
+    t.string "cv_file_name"
+    t.string "cv_content_type"
+    t.integer "cv_file_size"
+    t.datetime "cv_updated_at"
+    t.integer "candidate_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
