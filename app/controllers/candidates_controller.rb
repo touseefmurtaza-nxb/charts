@@ -89,8 +89,16 @@ class CandidatesController < ApplicationController
                                   encoding: 'UTF-8',
                                   javascript_delay: 5000
                                   # header: { content: header_html }
+
+          resume = Resume.last.try(:cv).try(:path)
+          pdf3 = CombinePDF.load(resume)
+          a4_size = [0, 0, 595, 842]
+          # keep aspect ratio intact
+          pdf3.pages.each {|p| p.resize a4_size}
+          # pdf3.save "a4.pdf"
+
           pdf << CombinePDF.new(pdf2)
-          pdf << CombinePDF.new(Resume.last.try(:cv).try(:path))
+          pdf << CombinePDF.new(pdf3.to_pdf)
           send_data pdf.to_pdf, :disposition => 'inline', :type => 'application/pdf'
         end
     end
