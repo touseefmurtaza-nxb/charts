@@ -10,14 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171103063036) do
+ActiveRecord::Schema.define(version: 20171107103517) do
 
   create_table "candidates", force: :cascade do |t|
-    t.string "name"
     t.string "email"
     t.datetime "interview_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "f_name"
+    t.string "l_name"
+    t.string "address"
+    t.string "phone_no"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "resumes", force: :cascade do |t|

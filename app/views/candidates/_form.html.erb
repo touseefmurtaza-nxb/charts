@@ -14,9 +14,27 @@
     </div>
   <% end %>
   <div class="form-group">
-    <%= f.label :name, :class => 'control-label col-lg-2' %>
+    <%= f.label "First Name", :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :name, :class => 'form-control' %>
+      <%= f.text_field :f_name, :class => 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label "Last Name", :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :l_name, :class => 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :address, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :address, :class => 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :phone_no, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :phone_no, :class => 'form-control' %>
     </div>
   </div>
   <div class="form-group">
@@ -31,8 +49,17 @@
       <%= f.text_field :interview_date, :class => 'form-control datepicker', autocomplete: "off" %>
     </div>
   </div>
-
+  <div class="form-group">
+    <%= f.label :image, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.file_field :image %>
+      <img id="hidden_img" src="#" alt="Candidate Img Preview" />
+    </div>
+  </div>
   <!--################## Work Experience ###################-->
+  <div class="break-line">
+    <h1>Work Experiences</h1>
+  </div>
   <div class="form-group">
     <%= f.fields_for :work_experiences, @candidate.work_experiences do |we| %>
         <%= render 'work_experience', f: we %>
@@ -41,8 +68,10 @@
   <div class="form-group">
     <%= link_to_add_fields "Add Experience", f, :work_experiences %>
   </div>
-
   <!--################## Resume ###################-->
+  <div class="break-line">
+    <h1>Resume</h1>
+  </div>
   <div class="form-group">
     <%= f.fields_for :resume, @candidate.resume do |re| %>
         <%= render 'resume', f: re %>
@@ -61,10 +90,6 @@
 
 <script>
   $(function(){
-//      $( "input.datepicker" ).datetimepicker({
-//          dateFormat: "mm/dd/yy",
-//          altFormat: "yy-mm-dd"
-//      });
       $('body').on('focus',".datepicker", function(){
           $(this).datetimepicker({dateFormat: "mm/dd/yy",altFormat: "yy-mm-dd"});
       })
@@ -81,6 +106,20 @@
           regexp = new RegExp($(this).data('id'), 'g');
           $(this).before($(this).data('fields').replace(regexp, time));
           return event.preventDefault();
+      });
+
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            $('#hidden_img').attr('src', e.target.result);
+          };
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $("#candidate_image").change(function(){
+          $("#hidden_img").css("display", "block");
+          readURL(this);
       });
   });
 </script>
