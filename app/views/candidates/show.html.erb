@@ -1,3 +1,4 @@
+<!--Top Header-->
 <div class="container" xmlns="http://www.w3.org/1999/html">
   <div class="">
     <%= image_tag @candidate.image.url, class: "header-img" %>
@@ -6,11 +7,34 @@
     <span class="candidate-address">
       <%= @candidate.address %>
     </span></br>
-    <span class="candidate-name">
-      <%= @candidate.f_name %>
+    <span class="candidate-name top-margin">
+      <%= @candidate.f_name.upcase %>
     </span></br>
     <span class="candidate-name">
-      <%= @candidate.l_name %>
+      <%= @candidate.l_name.upcase %>
     </span></br>
+    <span class="candidate-phone">
+      <%= @candidate.phone_no %>, <%= @candidate.email %>
+    </span></br>
+  </div>
+</div>
+
+<div class="experience container">
+  <div class="exp-heading">EXPERIENCE</div>
+  <div class="exp-data">
+    <div class="table-responsive">
+      <table class="table">
+        <tr class="danger">
+          <% @work_experiences.each do |we| %>
+            <th class="th"><%= we.from_date.strftime("%Y") %></th>
+          <% end %>
+        </tr>
+        <tr>
+          <% @work_experiences.each do |we| %>
+            <td><%= we.description %></td>
+          <% end %>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>

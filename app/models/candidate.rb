@@ -25,6 +25,7 @@ class Candidate < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   has_many :work_experiences, dependent: :destroy
+  has_many :languages, dependent: :destroy
   has_one :resume
   accepts_nested_attributes_for :work_experiences, reject_if: :all_blank, allow_destroy: true
 

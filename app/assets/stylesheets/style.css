@@ -46,3 +46,47 @@
 .header-info {
     float: right;
 }
+
+.candidate-address {
+    float: right;
+    margin: 10px;
+}
+
+.candidate-name {
+    font-size: -webkit-xxx-large;
+    float: right;
+    font-weight: bold;
+    color: #bd0303;
+    margin-top: 22px;
+    margin-right: 5px;
+}
+
+.candidate-phone {
+    float: right;
+    margin: 10px;
+}
+
+.top-margin {
+    margin-top: 1px;
+}
+
+.top-header {
+    background: honeydew;
+}
+
+.exp-heading {
+    margin-top: 1px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #bd0303;
+}
+
+.exp-data {
+    background: antiquewhite;
+    height: 15rem;
+    margin-top: 10px;
+}
+
+.th {
+    color: #bd0303;
+}

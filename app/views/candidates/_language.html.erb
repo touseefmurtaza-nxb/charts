@@ -1,0 +1,21 @@
+<%= f.label :language, :class => 'control-label col-lg-2' %>
+<div class="col-sm-6">
+  <%= f.text_field :name, :class => 'form-control', :placeholder => "Name", autocomplete: "off" %>
+</div>
+
+<div class="col-sm-6">
+  <select id="e1" style="width:300px">
+    <option value="AL">Alabama</option>
+    <option value="Am">Amalapuram</option>
+    <option value="An">Anakapalli</option>
+    <option value="Ak">Akkayapalem</option>
+    <option value="WY">Wyoming</option>
+  </select>
+  <%#= f.text_field :level, :class => 'form-control', :placeholder => "To Date", autocomplete: "off" %>
+  <%#= f.check_box :_destroy %> Delete
+</div>
+
+
+<script>
+    $("#e1").select2();
+</script>

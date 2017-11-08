@@ -10,6 +10,7 @@ class CandidatesController < ApplicationController
   # GET /candidates/1
   # GET /candidates/1.json
   def show
+    @work_experiences = @candidate.work_experiences.last(3)
   end
 
   # GET /candidates/new
