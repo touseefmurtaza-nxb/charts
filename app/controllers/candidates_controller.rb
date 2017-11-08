@@ -28,7 +28,7 @@ class CandidatesController < ApplicationController
   # POST /candidates.json
   def create
     @candidate = Candidate.new(candidate_params)
-    if params[:candidate][:resume][:cv].present?
+    if !params[:candidate][:resume].nil? and params[:candidate][:resume][:cv].present?
       resume = @candidate.build_resume
       resume.cv = resume_params
       resume.save!
@@ -49,7 +49,7 @@ class CandidatesController < ApplicationController
   def update
     respond_to do |format|
       if @candidate.update(candidate_params)
-        if params[:candidate][:resume][:cv].present?
+        if !params[:candidate][:resume].nil? and params[:candidate][:resume][:cv].present?
           if @candidate.resume.nil?
             resume = @candidate.build_resume
             resume.cv = resume_params
@@ -112,7 +112,6 @@ class CandidatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def candidate_params
-      # binding.pry
       params.require(:candidate).permit(:f_name, :l_name, :address, :phone_no, :email, :interview_date, :image, :resume, work_experiences_attributes: [:id, :from_date, :to_date, :description, :_destroy])
     end
 

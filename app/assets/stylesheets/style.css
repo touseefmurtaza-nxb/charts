@@ -33,3 +33,16 @@
     height: 15rem;
     width: 10rem;
 }
+
+.header-img {
+    height: 19rem;
+    width: 11rem;
+    float: right;
+    max-width: 11rem;
+    max-height: 19rem;
+    display: block;
+}
+
+.header-info {
+    float: right;
+}
