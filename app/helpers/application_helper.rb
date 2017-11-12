@@ -28,7 +28,7 @@ module ApplicationHelper
     new_object = f.object.send(association).klass.new
     id = new_object.object_id
     fields = f.fields_for(association, new_object, child_index: id) do |builder|
-      render(association.to_s.singularize, f: builder)
+      render(association.to_s.singularize, f: builder, readonly: false)
     end
     link_to(name, '#', class: "add_fields move-right", data: {id: id, fields: fields.gsub("\n", "")})
   end

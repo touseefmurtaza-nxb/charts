@@ -35,7 +35,7 @@
 }
 
 .header-img {
-    height: 19rem;
+    height: 15rem;
     width: 11rem;
     float: right;
     max-width: 11rem;
@@ -87,6 +87,17 @@
     margin-top: 10px;
 }
 
+.edu-data {
+    height: 15rem;
+    margin-top: 10px;
+}
+
 .th {
     color: #bd0303;
+}
+
+#language-chart {
+    width: 400px;
+    height: 300px;
+    margin-top: 10px;
 }

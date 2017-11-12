@@ -25,9 +25,13 @@ class Candidate < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   has_many :work_experiences, dependent: :destroy
-  has_many :languages, dependent: :destroy
-  has_one :resume
   accepts_nested_attributes_for :work_experiences, reject_if: :all_blank, allow_destroy: true
+  has_many :educations, dependent: :destroy
+  accepts_nested_attributes_for :educations, reject_if: :all_blank, allow_destroy: true
+  has_many :languages, dependent: :destroy
+  accepts_nested_attributes_for :languages, reject_if: :all_blank, allow_destroy: true
+
+  has_one :resume
 
   def name
     "#{f_name} #{l_name}"

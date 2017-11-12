@@ -56,18 +56,32 @@
       <img id="hidden_img" src="#" alt="Candidate Img Preview" />
     </div>
   </div>
+
   <!--################## Languages ###################-->
-  <!--<div class="break-line">-->
-    <!--<h1>Languages</h1>-->
-  <!--</div>-->
-  <!--<div class="form-group">-->
-    <!--<%#= f.fields_for :languages, @candidate.languages do |l| %>-->
-        <!--<%#= render 'language', f: l %>-->
-    <!--<%# end %>-->
-  <!--</div>-->
-  <!--<div class="form-group">-->
-    <!--<%#= link_to_add_fields "Add Language", f, :languages %>-->
-  <!--</div>-->
+  <div class="break-line">
+    <h1>Languages</h1>
+  </div>
+  <div class="form-group">
+    <%= f.fields_for :languages, @candidate.languages do |we| %>
+        <%= render 'language', f: we %>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <%= link_to_add_fields "Add Language", f, :languages %>
+  </div>
+
+  <!--################## Educations ###################-->
+  <div class="break-line">
+    <h1>Educations</h1>
+  </div>
+  <div class="form-group">
+    <%= f.fields_for :educations, @candidate.educations do |we| %>
+        <%= render 'education', f: we %>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <%= link_to_add_fields "Add Education", f, :educations %>
+  </div>
 
   <!--################## Work Experience ###################-->
   <div class="break-line">

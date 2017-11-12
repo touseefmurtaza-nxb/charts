@@ -1,3 +1,19 @@
+<% data = []
+   @candidate.languages.order(:name).each do |l|
+     if l.level == 'mothertongue'
+       y=3
+     elsif l.level == 'fluent'
+       y=2
+     elsif l.level == 'good'
+       y=1
+     else
+       y=0
+     end
+     content = {y:y, color:'#bd0303'}
+     data.push(content)
+   end
+%>
+
 <!--Top Header-->
 <div class="container" xmlns="http://www.w3.org/1999/html">
   <div class="">
@@ -38,3 +54,67 @@
     </div>
   </div>
 </div>
+
+<div id="language-chart"></div>
+
+<div class="container">
+  <div class="exp-heading">Education</div>
+  <div class="edu-data">
+    <div class="table-responsive">
+      <table class="table">
+        <tr class="">
+          <% @educations.each do |we| %>
+              <th class="th"><%= we.from_date.strftime("%Y") %></th>
+          <% end %>
+        </tr>
+        <tr>
+          <% @educations.each do |we| %>
+              <td><%= we.description %></td>
+          <% end %>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    $('#language-chart').highcharts({
+        chart: {
+          type: 'column'
+        },
+        credits: { enabled: false },
+        tooltip: { enabled: false },
+        legend: { enabled: false },
+        title: {
+          text: 'Languages',
+            align: 'left',
+            x: 10,
+            y: 10,
+            style: {
+                color: '#bd0303',
+                fontWeight: 'bold'
+            }
+        },
+        xAxis: {
+          title: {text: "Language"},
+          categories: <%= raw(@candidate.languages.order(:name).pluck(:name).map(&:capitalize)) %>
+        },
+        yAxis: {
+          title: {text: "Expert Level"},
+          categories: <%= raw(@candidate.languages.sort_by { |k,v| Language::LEVEL_RANK[k[:level]]  }.pluck(:level).map(&:upcase)) %>
+        },
+        plotOptions: {
+          series: {
+            states: {
+              hover: {
+                  enabled: false
+              }
+            }
+          }
+        },
+        series: [{
+
+            data: <%= raw(data.to_json) %>
+        }]
+    });
+</script>

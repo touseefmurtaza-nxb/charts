@@ -15,6 +15,7 @@
 //= require jquery-ui
 //= require jquery.datetimepicker.full
 //= require twitter/bootstrap
+//= require bootstrap-select
 //= require highcharts
 //= require xrange
 // require exporting

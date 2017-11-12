@@ -12,4 +12,33 @@
 
 class Language < ApplicationRecord
   belongs_to :candidate
+  PRIORITIES = {
+      :mothertongue => 3,
+      :fluent  => 2,
+      :good  => 1,
+      :notions  => 0
+  }
+
+  def <=> (other)
+    PRIORITIES[self.priority] <=> PRIORITIES[other.priority]
+  end
+
+  LEVELS = {"MOTHERTONGUE" => "mothertongue",
+            "FLUENT" => "fluent",
+            "GOOD" => "good",
+            "NOTIONS" => "notions"
+           }
+
+  NAMES = {"ENGLISH" => "english",
+            "PERSIAN" => "persian",
+            "URDU" => "urdu",
+            "PUNJABI" => "punjabi"
+  }
+
+  LEVEL_RANK = {
+      "mothertongue" => "3",
+      "fluent" => "2",
+      "good" => "1",
+      "notions" => "0",
+  }
 end
