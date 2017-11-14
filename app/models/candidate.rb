@@ -30,6 +30,10 @@ class Candidate < ApplicationRecord
   accepts_nested_attributes_for :educations, reject_if: :all_blank, allow_destroy: true
   has_many :languages, dependent: :destroy
   accepts_nested_attributes_for :languages, reject_if: :all_blank, allow_destroy: true
+  has_many :technical_skills, dependent: :destroy
+  accepts_nested_attributes_for :technical_skills, reject_if: :all_blank, allow_destroy: true
+  has_many :specializations, dependent: :destroy
+  accepts_nested_attributes_for :specializations, reject_if: :all_blank, allow_destroy: true
 
   has_one :resume
 

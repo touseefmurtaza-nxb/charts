@@ -55,10 +55,21 @@
   </div>
 </div>
 
-<div id="language-chart"></div>
+<div id="language-chart" class=""></div>
+
+<div class="tech_skills">
+  <div class="skills-heading">Technical Skills</div>
+  <div class="skills-data">
+    <ul>
+      <% @tech_skills.each do |skill| %>
+          <li><i class="fa fa-check" aria-hidden="true"></i> <%= skill.name %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
 <div class="container">
-  <div class="exp-heading">Education</div>
+  <div class="edu-heading">Education</div>
   <div class="edu-data">
     <div class="table-responsive">
       <table class="table">
@@ -77,6 +88,16 @@
   </div>
 </div>
 
+<div class="container specialization">
+  <div class="skills-heading">SKILLS AND SPECIALITIES</div>
+  <div class="skills-data">
+    <ul>
+      <% @specializations.each do |sp| %>
+          <li><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp;  <span class="specialization_name"><%= sp.name.capitalize %></span> <span><%= sp.description %></span></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 <script type="text/javascript">
     $('#language-chart').highcharts({
         chart: {

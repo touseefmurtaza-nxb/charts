@@ -74,7 +74,7 @@
     background: honeydew;
 }
 
-.exp-heading {
+.exp-heading, .edu-heading, .skills-heading{
     margin-top: 1px;
     font-size: xx-large;
     font-weight: bold;
@@ -100,4 +100,38 @@
     width: 400px;
     height: 300px;
     margin-top: 10px;
+}
+
+.tech_skills {
+    float: right;
+    margin: -290px 172px 0 0;
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: outside;
+    list-style-image: none;
+}
+
+.skills-data {
+    margin-top: 20px;
+}
+
+.skills-data ul {
+    line-height: 30px;
+    font-size: medium;
+    font-family: sans-serif;
+    list-style: none;
+    padding-left: 20px !important;
+}
+
+.specialization_name {
+    color: #bd0303;
+    font-weight: bold;
+}
+
+.specialization {
+    width: 500px;
+    float: left;
+    line-height: 0px;
 }

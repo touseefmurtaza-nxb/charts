@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171112175752) do
+ActiveRecord::Schema.define(version: 20171113180900) do
 
   create_table "candidates", force: :cascade do |t|
     t.string "email"
@@ -49,6 +49,21 @@ ActiveRecord::Schema.define(version: 20171112175752) do
     t.string "cv_content_type"
     t.integer "cv_file_size"
     t.datetime "cv_updated_at"
+    t.integer "candidate_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "specializations", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "candidate_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "technical_skills", force: :cascade do |t|
+    t.string "name"
     t.integer "candidate_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

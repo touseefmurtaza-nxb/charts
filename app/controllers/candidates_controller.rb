@@ -12,6 +12,8 @@ class CandidatesController < ApplicationController
   def show
     @work_experiences = @candidate.work_experiences.last(3)
     @educations = @candidate.educations.last(3)
+    @tech_skills = @candidate.technical_skills.first(5)
+    @specializations = @candidate.specializations.first(5)
   end
 
   # GET /candidates/new
@@ -20,6 +22,8 @@ class CandidatesController < ApplicationController
     @candidate.work_experiences.build
     @candidate.educations.build
     @candidate.languages.build
+    @candidate.technical_skills.build
+    @candidate.specializations.build
     @candidate.build_resume
   end
 
@@ -115,7 +119,7 @@ class CandidatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def candidate_params
-      params.require(:candidate).permit(:f_name, :l_name, :address, :phone_no, :email, :interview_date, :image, :resume, work_experiences_attributes: [:id, :from_date, :to_date, :description, :_destroy], languages_attributes: [:id, :name, :level, :_destroy], educations_attributes: [:id, :from_date, :to_date, :description, :_destroy])
+      params.require(:candidate).permit(:f_name, :l_name, :address, :phone_no, :email, :interview_date, :image, :resume, work_experiences_attributes: [:id, :from_date, :to_date, :description, :_destroy], languages_attributes: [:id, :name, :level, :_destroy], educations_attributes: [:id, :from_date, :to_date, :description, :_destroy], technical_skills_attributes: [:id, :name, :_destroy], specializations_attributes: [:id, :name, :description, :_destroy])
     end
 
     def resume_params
