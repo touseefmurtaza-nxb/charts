@@ -18,5 +18,7 @@
 //= require bootstrap-select
 //= require highcharts
 //= require xrange
+//= require jquery.raty
+//= require ratyrate
 // require exporting
-//= require turbolinks
+// require turbolinks
