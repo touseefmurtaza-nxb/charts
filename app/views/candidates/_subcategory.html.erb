@@ -1,5 +1,5 @@
 <%= f.label :subcategory, :class => 'control-label col-lg-2' %>
 <div class="col-lg-5">
   <%= f.text_field :name, :class => 'form-control', :placeholder => "Name"%>
-  Rating : <%= rating_for Subcategory.last, 'score', cancel: true %>
+  Rating : <%= rating_for Subcategory.last, 'score', cancel: false %>
 </div>
