@@ -114,13 +114,11 @@ class CandidatesController < ApplicationController
   def resume_parser
     resume = Resume.last.try(:cv).try(:path)
     pdf = WickedPdf.new.pdf_from_string(resume)
-
     f = File.open("/home/deadpool/Desktop/resume1.pdf.txt")
     str = ""
     f.each do |line|
       str = str+line
     end
-    binding.pry
     render :nothing => true
   end
 
