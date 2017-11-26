@@ -5,7 +5,7 @@
 #  id           :integer          not null, primary key
 #  name         :string
 #  candidate_id :integer
-#  rating       :integer
+#  rating       :float
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #

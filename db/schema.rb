@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171116171629) do
+ActiveRecord::Schema.define(version: 20171124184501) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer "rater_id"
@@ -36,12 +36,14 @@ ActiveRecord::Schema.define(version: 20171116171629) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+    t.string "country"
+    t.string "state"
   end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.integer "candidate_id"
-    t.integer "rating"
+    t.float "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -15,10 +15,12 @@
 #  image_content_type :string
 #  image_file_size    :integer
 #  image_updated_at   :datetime
+#  country            :string
+#  state              :string
 #
 
 class Candidate < ApplicationRecord
-  validates :interview_date, :email, :f_name, :l_name, :address, :phone_no, presence: true
+  # validates :interview_date, :email, :f_name, :l_name, :address, :phone_no, presence: true
   validates :email, uniqueness: true
 
   has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/images/missing.jpg"

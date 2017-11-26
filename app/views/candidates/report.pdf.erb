@@ -33,14 +33,7 @@
         series: [{
             name: 'Brands',
             colorByPoint: true,
-            data: [
-                   {name: 'ITSM',y: 59.33},
-                   {name: 'ITOM',y: 24.40,sliced: true,selected: true},
-                   {name: 'ITBM',y: 10.38},
-                   {name: 'HR SERVICE',y: 4.77},
-                   {name: 'LANGUAGE',y: 0.91},
-                   {name: 'INTEGRATIONS',y: 0.2}
-                  ]
+            data: <%= @data %>
         }]
     });
 </script>

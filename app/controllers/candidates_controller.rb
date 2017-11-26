@@ -1,5 +1,5 @@
 class CandidatesController < ApplicationController
-  before_action :set_candidate, only: [:show, :edit, :update, :destroy]
+  before_action :set_candidate, only: [:show, :edit, :update, :destroy, :report]
 
   # GET /candidates
   # GET /candidates.json
@@ -85,29 +85,30 @@ class CandidatesController < ApplicationController
   end
 
   def report
+    @data = []
+    @candidate.categories.each do |cat|
+      @data << {name: cat.name, y: cat.rating}
+    end
     respond_to do |format|
       format.html
       format.pdf do
-          # header_html = render_to_string( layout: 'pdf_header.html' )
-          pdf  = CombinePDF.new
-          pdf2 = render_to_string pdf: 'Assessment Report of #{@candidate.name}.pdf',
-                                  template: 'candidates/report.pdf',
-                                  layout: 'pdf_layout.html',
-                                  encoding: 'UTF-8',
-                                  javascript_delay: 5000
-                                  # header: { content: header_html }
+        pdf  = CombinePDF.new
+        pdf2 = render_to_string pdf: 'Assessment Report of #{@candidate.name}.pdf',
+                                template: 'candidates/report.pdf',
+                                layout: 'pdf_layout.html',
+                                encoding: 'UTF-8',
+                                javascript_delay: 5000
+        resume = @candidate.resume.try(:cv).try(:path)
+        pdf3 = CombinePDF.load(resume)
+        a4_size = [0, 0, 595, 842]
+        # keep aspect ratio intact
+        pdf3.pages.each {|p| p.resize a4_size}
+        # pdf3.save "a4.pdf"
 
-          resume = Resume.last.try(:cv).try(:path)
-          pdf3 = CombinePDF.load(resume)
-          a4_size = [0, 0, 595, 842]
-          # keep aspect ratio intact
-          pdf3.pages.each {|p| p.resize a4_size}
-          # pdf3.save "a4.pdf"
-
-          pdf << CombinePDF.new(pdf2)
-          pdf << CombinePDF.new(pdf3.to_pdf)
-          send_data pdf.to_pdf, :disposition => 'inline', :type => 'application/pdf'
-        end
+        pdf << CombinePDF.new(pdf2)
+        pdf << CombinePDF.new(pdf3.to_pdf)
+        send_data pdf.to_pdf, :disposition => 'inline', :type => 'application/pdf'
+      end
     end
   end
 
