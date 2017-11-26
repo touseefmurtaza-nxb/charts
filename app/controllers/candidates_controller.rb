@@ -14,6 +14,10 @@ class CandidatesController < ApplicationController
     @educations = @candidate.educations.last(3)
     @tech_skills = @candidate.technical_skills.first(5)
     @specializations = @candidate.specializations.first(5)
+    @data = []
+    @candidate.categories.each do |cat|
+      @data << {name: cat.name, y: cat.rating}
+    end
   end
 
   # GET /candidates/new

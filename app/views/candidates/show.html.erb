@@ -17,7 +17,7 @@
 <!--Top Header-->
 <div class="container" xmlns="http://www.w3.org/1999/html">
   <div class="">
-    <%= image_tag @candidate.image.url, class: "header-img" %>
+    <%= image_tag (@candidate.image.present? ? @candidate.image.url : "missing.jpg"), class: "header-img" %>
   </div>
   <div class="header-info">
     <span class="candidate-address">
@@ -98,6 +98,9 @@
     </ul>
   </div>
 </div>
+
+<div id="skill-set"></div>
+
 <script type="text/javascript">
     $('#language-chart').highcharts({
         chart: {
@@ -136,6 +139,47 @@
         series: [{
 
             data: <%= raw(data.to_json) %>
+        }]
+    });
+</script>
+<script type="text/javascript">
+    Highcharts.chart('skill-set', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        credits: { enabled: false },
+        tooltip: { enabled: false },
+        legend: { enabled: false },
+        title: {
+            text: 'Skills Set',
+            align: 'center',
+            x: 10,
+            y: 10,
+            style: {
+                color: '#bd0303',
+                fontWeight: 'bold'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: <%= raw(@data.to_json) %>
         }]
     });
 </script>

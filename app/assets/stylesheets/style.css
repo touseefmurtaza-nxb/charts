@@ -74,11 +74,19 @@
     background: honeydew;
 }
 
-.exp-heading, .edu-heading, .skills-heading{
+.exp-heading, .edu-heading{
     margin-top: 1px;
     font-size: xx-large;
     font-weight: bold;
     color: #bd0303;
+}
+
+.skills-heading {
+    margin-top: 10px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #bd0303;
+    line-height: 10px;
 }
 
 .exp-data {
@@ -134,4 +142,11 @@ ul {
     width: 500px;
     float: left;
     line-height: 0px;
+}
+
+#skill-set {
+    width: 200px !important;
+    height: 200px !important;
+    margin-bottom: 10px !important;
+    display: inline;
 }

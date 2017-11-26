@@ -45,4 +45,8 @@ class Candidate < ApplicationRecord
   def name
     "#{f_name} #{l_name}"
   end
+
+  def address
+    "#{state}, #{country}"
+  end
 end
