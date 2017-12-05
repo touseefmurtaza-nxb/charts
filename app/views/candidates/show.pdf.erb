@@ -1,0 +1,186 @@
+<% data = []
+   @candidate.languages.order(:name).each do |l|
+     if l.level == 'mothertongue'
+       y=3
+     elsif l.level == 'fluent'
+       y=2
+     elsif l.level == 'good'
+       y=1
+     else
+       y=0
+     end
+     content = {y:y, color:'#bd0303'}
+     data.push(content)
+   end
+%>
+
+<!--Top Header-->
+<div class="container" xmlns="http://www.w3.org/1999/html">
+  <div class="">
+    <%#= wicked_pdf_image_tag (@candidate.image.present? ? @candidate.image.url(:thumb) : "missing.jpg"), class: "header-img" %>
+    <%= image_tag (@candidate.image.present? ? @candidate.image.url(:thumb) : "missing.jpg"), class: "header-img" %>
+  </div>
+  <div class="header-info">
+    <span class="candidate-address">
+      <%= @candidate.address %>
+    </span></br>
+    <span class="candidate-name top-margin">
+      <%= @candidate.f_name.upcase %>
+    </span></br>
+    <span class="candidate-name">
+      <%= @candidate.l_name.upcase %>
+    </span></br>
+    <span class="candidate-phone">
+      <%= @candidate.phone_no %>, <%= @candidate.email %>
+    </span></br>
+  </div>
+</div>
+
+<div class="experience container">
+  <div class="exp-heading">EXPERIENCE</div>
+  <div class="exp-data">
+    <div class="table-responsive">
+      <table class="table">
+        <tr class="danger">
+          <% @work_experiences.each do |we| %>
+            <th class="th"><%= we.from_date.strftime("%Y") %></th>
+          <% end %>
+        </tr>
+        <tr>
+          <% @work_experiences.each do |we| %>
+            <td><%= we.description %></td>
+          <% end %>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="language-chart" class=""></div>
+
+<div class="tech_skills">
+  <div class="skills-heading">Technical Skills</div>
+  <div class="skills-data">
+    <ul>
+      <% @tech_skills.each do |skill| %>
+          <li><i class="fa fa-check" aria-hidden="true"></i> <%= skill.name %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <div class="edu-heading">Education</div>
+  <div class="edu-data">
+    <div class="table-responsive">
+      <table class="table">
+        <tr class="">
+          <% @educations.each do |we| %>
+              <th class="th"><%= we.from_date.strftime("%Y") %></th>
+          <% end %>
+        </tr>
+        <tr>
+          <% @educations.each do |we| %>
+              <td><%= we.description %></td>
+          <% end %>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="container specialization">
+  <div class="skills-heading">SKILLS AND SPECIALITIES</div>
+  <div class="skills-data">
+    <ul>
+      <% @specializations.each do |sp| %>
+          <li><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp;  <span class="specialization_name"><%= sp.name.capitalize %></span> <span><%= sp.description %></span></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div id="skill-set"></div>
+
+<script type="text/javascript">
+    $('#language-chart').highcharts({
+        chart: {
+          type: 'column'
+        },
+        credits: { enabled: false },
+        tooltip: { enabled: false },
+        legend: { enabled: false },
+        title: {
+          text: 'Languages',
+            align: 'left',
+            x: 10,
+            y: 10,
+            style: {
+                color: '#bd0303',
+                fontWeight: 'bold'
+            }
+        },
+        xAxis: {
+          title: {text: "Language"},
+          categories: <%= raw(@candidate.languages.order(:name).pluck(:name).map(&:capitalize)) %>
+        },
+        yAxis: {
+          title: {text: "Expert Level"},
+          categories: <%= raw(@candidate.languages.sort_by { |k,v| Language::LEVEL_RANK[k[:level]]  }.pluck(:level).map(&:upcase)) %>
+        },
+        plotOptions: {
+          series: {
+            states: {
+              hover: {
+                  enabled: false
+              }
+            }
+          }
+        },
+        series: [{
+
+            data: <%= raw(data.to_json) %>
+        }]
+    });
+</script>
+<script type="text/javascript">
+    Highcharts.chart('skill-set', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        credits: { enabled: false },
+        tooltip: { enabled: false },
+        legend: { enabled: false },
+        title: {
+            text: 'Skills Set',
+            align: 'center',
+            x: 10,
+            y: 10,
+            style: {
+                color: '#bd0303',
+                fontWeight: 'bold'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: <%= raw(@data.to_json) %>
+        }]
+    });
+</script>
