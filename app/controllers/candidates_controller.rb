@@ -18,6 +18,16 @@ class CandidatesController < ApplicationController
     @candidate.categories.each do |cat|
       @data << {name: cat.name, y: cat.rating}
     end
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf:                            'Resume Assessment',
+               template:                       'candidates/show.pdf',
+               layout:                         'pdf.html',
+               javascript_delay:                2000,
+               show_as_html:                   params.key?('debug')
+      end
+    end
   end
 
   # GET /candidates/new
@@ -99,7 +109,7 @@ class CandidatesController < ApplicationController
         pdf  = CombinePDF.new
         pdf2 = render_to_string pdf: 'Assessment Report of #{@candidate.name}.pdf',
                                 template: 'candidates/report.pdf',
-                                layout: 'pdf_layout.html',
+                                layout: 'pdf',
                                 encoding: 'UTF-8',
                                 javascript_delay: 5000
         resume = @candidate.resume.try(:cv).try(:path)

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <title><%= @candidate.name %> Assessment Report</title>
+  <meta charset='utf-8' />
+  <%#= wicked_pdf_stylesheet_link_tag "pdf", media: "all", "data-turbolinks-track" => true %>
+  <%#= wicked_pdf_javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "pdf" %>
+  <%= wicked_pdf_javascript_include_tag "application", "data-turbolinks-track" => true %>
+</head>
+<body onload='', class="pdf_page-border">
+<div id="header">
+  <%#= image_tag wicked_pdf_asset_base64('logo.png') %>
+</div>
+
+<div class="pdf_header">
+  <section>
+    <%#= wicked_pdf_image_tag 'logo.png' %>
+    <%= image_tag 'logo.png' %>
+  </section>
+</div>
+<div id="content">
+  <%= yield %>
+</div>
+</body>
+</html>
