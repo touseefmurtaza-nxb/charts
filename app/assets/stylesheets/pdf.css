@@ -1,5 +1,3 @@
-
-
 .user-img, .header-info, .candidate-address, .candidate-name {
     float: right;
 }
@@ -12,13 +10,39 @@
     font-weight: bold;
     color: #bd0303;
 }
-.exp-data {
+.exp-data, .edu-data {
     background: antiquewhite;
-    height: 15rem;
-    margin-top: 10px;
+    height: 7rem;
+    padding: 5px;
 }
 .th {
     color: #bd0303;
 }
-.experience {
+.container {
+    width: 100%;
+}
+#language-chart {
+    float: left;
+}
+.education {
+    float: left;
+}
+.tech_skills {
+    text-align: center;
+    float: right;
+    margin-right: 7rem;
+    margin-top: 6px;
+    line-height: 25px;
+}
+.container {
+    float: left;
+}
+.logo {
+    float: left;
+}
+.skills-heading {
+    margin-top: 0px;
+    font-size: large;
+    font-weight: bold;
+    color: #bd0303;
 }

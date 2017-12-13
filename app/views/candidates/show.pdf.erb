@@ -56,7 +56,7 @@
   </div>
 </div>
 
-<div id="language-chart" class=""></div>
+<div id="language-chart" style="height: 250px"></div>
 
 <div class="tech_skills">
   <div class="skills-heading">Technical Skills</div>
@@ -67,9 +67,9 @@
       <% end %>
     </ul>
   </div>
-</div>
+</div><br/><br/><br/><br/><br/><br/>
 
-<div class="container">
+<div class="container education">
   <div class="edu-heading">Education</div>
   <div class="edu-data">
     <div class="table-responsive">
@@ -105,7 +105,8 @@
 <script type="text/javascript">
     $('#language-chart').highcharts({
         chart: {
-          type: 'column'
+          type: 'column',
+          width: 300
         },
         credits: { enabled: false },
         tooltip: { enabled: false },
