@@ -16,25 +16,25 @@
 
 <!--Top Header-->
 <div class="container" xmlns="http://www.w3.org/1999/html">
-  <div class="">
+  <div class="user-img">
     <%#= wicked_pdf_image_tag (@candidate.image.present? ? @candidate.image.url(:thumb) : "missing.jpg"), class: "header-img" %>
-    <%= image_tag (@candidate.image.present? ? @candidate.image.url(:thumb) : "missing.jpg"), class: "header-img" %>
+    <%= wicked_pdf_image_tag (@candidate.image.present? ? @candidate.image.url(:thumb) : "missing.jpg"), class: "header-img" %>
   </div>
   <div class="header-info">
-    <span class="candidate-address">
+    <span class="candidate-address right-margin">
       <%= @candidate.address %>
     </span></br>
-    <span class="candidate-name top-margin">
+    <span class="candidate-name right-margin">
       <%= @candidate.f_name.upcase %>
     </span></br>
-    <span class="candidate-name">
+    <span class="candidate-name right-margin">
       <%= @candidate.l_name.upcase %>
     </span></br>
     <span class="candidate-phone">
       <%= @candidate.phone_no %>, <%= @candidate.email %>
     </span></br>
   </div>
-</div>
+</div><br/><br/><br/><br/>
 
 <div class="experience container">
   <div class="exp-heading">EXPERIENCE</div>

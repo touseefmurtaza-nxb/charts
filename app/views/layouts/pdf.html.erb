@@ -5,7 +5,7 @@
   <meta charset='utf-8' />
   <%#= wicked_pdf_stylesheet_link_tag "pdf", media: "all", "data-turbolinks-track" => true %>
   <%#= wicked_pdf_javascript_include_tag "application" %>
-  <%= stylesheet_link_tag "pdf" %>
+  <%= wicked_pdf_stylesheet_link_tag "pdf" %>
   <%= wicked_pdf_javascript_include_tag "application", "data-turbolinks-track" => true %>
 </head>
 <body onload='', class="pdf_page-border">

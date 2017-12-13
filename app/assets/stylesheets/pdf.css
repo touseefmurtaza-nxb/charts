@@ -1,30 +1,24 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_self
- *= require bootstrap_and_overrides
- *= require jquery-ui
- *= require font-awesome
- *= require jquery.datetimepicker.min
- *= require_tree .
- */
 
-body{
-  margin: 0px !important;
-}
-.no-border-radius{
-  border-radius: 0px !important;
-}
 
-.pdf_page-border {
-  border: 1px solid red;
+.user-img, .header-info, .candidate-address, .candidate-name {
+    float: right;
+}
+.right-margin {
+    margin-right: 5px;
+}
+.exp-heading, .edu-heading{
+    margin-top: 1px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #bd0303;
+}
+.exp-data {
+    background: antiquewhite;
+    height: 15rem;
+    margin-top: 10px;
+}
+.th {
+    color: #bd0303;
+}
+.experience {
 }
