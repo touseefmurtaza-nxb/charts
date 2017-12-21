@@ -15,19 +15,19 @@
 %>
 
 <!--Top Header-->
-<div class="container" xmlns="http://www.w3.org/1999/html">
-  <div class="user-img">
+<div class="container_pdf" xmlns="http://www.w3.org/1999/html">
+  <div class="user-img_pdf">
     <%#= wicked_pdf_image_tag (@candidate.image.present? ? @candidate.image.url(:thumb) : "missing.jpg"), class: "header-img" %>
     <%= wicked_pdf_image_tag (@candidate.image.present? ? @candidate.image.url(:thumb) : "missing.jpg"), class: "header-img" %>
   </div>
-  <div class="header-info">
-    <span class="candidate-address right-margin">
+  <div class="header-info_pdf">
+    <span class="candidate-address_pdf right-margin_pdf">
       <%= @candidate.address %>
     </span></br>
-    <span class="candidate-name right-margin">
+    <span class="candidate-name_pdf right-margin_pdf">
       <%= @candidate.f_name.upcase %>
     </span></br>
-    <span class="candidate-name right-margin">
+    <span class="candidate-name_pdf right-margin_pdf">
       <%= @candidate.l_name.upcase %>
     </span></br>
     <span class="candidate-phone">
@@ -36,14 +36,14 @@
   </div>
 </div><br/><br/><br/><br/>
 
-<div class="experience container">
-  <div class="exp-heading">EXPERIENCE</div>
-  <div class="exp-data">
+<div class="experience_pdf container_pdf">
+  <div class="exp-heading_pdf">EXPERIENCE</div>
+  <div class="exp-data_pdf">
     <div class="table-responsive">
       <table class="table">
         <tr class="danger">
           <% @work_experiences.each do |we| %>
-            <th class="th"><%= we.from_date.strftime("%Y") %></th>
+            <th class="th_pdf"><%= we.from_date.strftime("%Y") %></th>
           <% end %>
         </tr>
         <tr>
@@ -56,10 +56,10 @@
   </div>
 </div>
 
-<div id="language-chart" style="height: 250px"></div>
+<div id="language-chart_pdf" style="height: 250px"></div>
 
-<div class="tech_skills">
-  <div class="skills-heading">Technical Skills</div>
+<div class="tech_skills_pdf">
+  <div class="skills-heading_pdf">Technical Skills</div>
   <div class="skills-data">
     <ul>
       <% @tech_skills.each do |skill| %>
@@ -67,16 +67,16 @@
       <% end %>
     </ul>
   </div>
-</div><br/><br/><br/><br/><br/><br/>
+</div>
 
-<div class="container education">
-  <div class="edu-heading">Education</div>
-  <div class="edu-data">
+<div class="container_pdf education_pdf">
+  <div class="edu-heading_pdf">Education</div>
+  <div class="edu-data_pdf">
     <div class="table-responsive">
       <table class="table">
         <tr class="">
           <% @educations.each do |we| %>
-              <th class="th"><%= we.from_date.strftime("%Y") %></th>
+              <th class="th_pdf"><%= we.from_date.strftime("%Y") %></th>
           <% end %>
         </tr>
         <tr>
@@ -89,21 +89,20 @@
   </div>
 </div>
 
-<div class="container specialization">
-  <div class="skills-heading">SKILLS AND SPECIALITIES</div>
+<div class="specialization_pdf">
+  <div class="skills-heading_pdf">SKILLS AND SPECIALITIES</div>
   <div class="skills-data">
     <ul>
       <% @specializations.each do |sp| %>
-          <li><i class="fa fa-hand-o-right" aria-hidden="true"></i> &nbsp;  <span class="specialization_name"><%= sp.name.capitalize %></span> <span><%= sp.description %></span></li>
+          <li><span class="specialization_name_pdf"><%= sp.name.capitalize %></span> <span><%= sp.description %></span></li>
       <% end %>
     </ul>
   </div>
 </div>
 
-<div id="skill-set"></div>
-
+<div id="skill-set_pdf"></div>
 <script type="text/javascript">
-    $('#language-chart').highcharts({
+    $('#language-chart_pdf').highcharts({
         chart: {
           type: 'column',
           width: 300
@@ -145,12 +144,14 @@
     });
 </script>
 <script type="text/javascript">
-    Highcharts.chart('skill-set', {
+    Highcharts.chart('skill-set_pdf', {
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
-            type: 'pie'
+            type: 'pie',
+//            width: 300,
+            height: 200
         },
         credits: { enabled: false },
         tooltip: { enabled: false },

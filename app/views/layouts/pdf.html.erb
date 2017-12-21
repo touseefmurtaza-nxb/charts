@@ -15,11 +15,46 @@
 
 <div class="pdf_header">
   <section>
-    <div class="logo">
-      <%#= wicked_pdf_image_tag 'logo.png' %>
-    </div>
-    <%= image_tag 'logo.png' %>
+    <% if request.url.include?("debug") %>
+      <%= image_tag 'logo.png', class: "company_logo_pdf" %>
+      <table class="right_header_pdf">
+        <tr>
+          <td>100 Overlook Center, 2nd Floor, Princeton, NJ 08540</td>
+          <td style="float: right"><%= image_tag 'home.png', class: "home_icon" %></td>
+        </tr>
+        <tr>
+          <td>www.riptonsolutions.com</td>
+          <td style="float: right"><%= image_tag 'web.png', class: "home_icon" %></td>
+        </tr>
+        <tr>
+          <td>(800) 390-6638</td>
+          <td style="float: right"><%= image_tag 'contact.png', class: "home_icon" %></td>
+        </tr>
+      </table>
+    <% else %>
+      <%= wicked_pdf_image_tag 'logo.png', class: "company_logo_pdf" %>
+      <table class="right_header_pdf">
+        <tr>
+          <td>100 Overlook Center, 2nd Floor, Princeton, NJ 08540</td>
+          <td style="float: right"><%= wicked_pdf_image_tag 'home.png', class: "home_icon" %></td>
+        </tr>
+        <tr>
+          <td>www.riptonsolutions.com</td>
+          <td style="float: right;"><%= wicked_pdf_image_tag 'web.png', class: "home_icon" %></td>
+        </tr>
+        <tr>
+          <td>(800) 390-6638</td>
+          <td style="float: right"><%= wicked_pdf_image_tag 'contact.png', class: "home_icon" %></td>
+        </tr>
+      </table>
+    <% end %>
   </section>
+  <!--<div>-->
+    <!--<span style="float: right;"><%#= image_tag 'home.png', class: "web_icon" %></span>-->
+    <!--<div style="float: right;  margin-top: 8px; font-size: medium;">100 Overlook Center, 2nd Floor, Princeton, NJ 08540</div><br/>-->
+  <!--</div>-->
+
+
 </div>
 <div id="content">
   <%= yield %>

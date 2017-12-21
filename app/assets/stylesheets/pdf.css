@@ -1,48 +1,82 @@
-.user-img, .header-info, .candidate-address, .candidate-name {
+.user-img_pdf, .header-info_pdf, .candidate-address_pdf, .candidate-name_pdf {
     float: right;
 }
-.right-margin {
+.candidate-name_pdf {
+    color: #bd0303;
+    font-weight: bold;
+}
+.right-margin_pdf {
     margin-right: 5px;
 }
-.exp-heading, .edu-heading{
+.exp-heading_pdf, .edu-heading_pdf{
     margin-top: 1px;
     font-size: xx-large;
     font-weight: bold;
     color: #bd0303;
 }
-.exp-data, .edu-data {
+.exp-data_pdf, .edu-data_pdf {
     background: antiquewhite;
     height: 7rem;
     padding: 5px;
 }
-.th {
+.th_pdf {
     color: #bd0303;
 }
-.container {
+.container_pdf {
     width: 100%;
-}
-#language-chart {
     float: left;
 }
-.education {
+#language-chart_pdf {
     float: left;
 }
-.tech_skills {
+.education_pdf {
+    float: left;
+}
+.tech_skills_pdf {
     text-align: center;
     float: right;
     margin-right: 7rem;
     margin-top: 6px;
     line-height: 25px;
 }
-.container {
+.logo_pdf {
     float: left;
 }
-.logo {
-    float: left;
-}
-.skills-heading {
+.skills-heading_pdf {
     margin-top: 0px;
     font-size: large;
     font-weight: bold;
     color: #bd0303;
+}
+.specialization_pdf {
+    float: left;
+    width: 20rem;
+}
+#skill-set_pdf {
+    float: right;
+    width: 20rem;
+}
+.specialization_name_pdf {
+    color: #bd0303;
+    font-weight: bold;
+}
+.company_logo_pdf {
+    margin: 0;
+    padding: 0 !important;
+    float: left;
+}
+.home_icon {
+    height: 20px;
+}
+.right_header_pdf {
+    float: right;
+    text-align: right;
+    font-size: 10px;
+}
+table td {
+    padding: 0;
+}
+.home_ico_txt {
+}
+.home_ico {
 }
