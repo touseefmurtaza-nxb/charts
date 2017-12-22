@@ -76,7 +76,15 @@
 table td {
     padding: 0;
 }
+
 .home_ico_txt {
 }
+
 .home_ico {
 }
+
+body {
+    page-break-after: auto
+}
+
+.content { margin-bottom: 0; padding-bottom: 0; }

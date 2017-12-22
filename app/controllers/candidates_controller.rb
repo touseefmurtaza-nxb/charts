@@ -18,17 +18,38 @@ class CandidatesController < ApplicationController
     @candidate.categories.each do |cat|
       @data << {name: cat.name, y: cat.rating}
     end
-    respond_to do |format|
-      format.html
-      format.pdf do
-        render pdf:                            'Resume Assessment',
-               template:                       'candidates/show.pdf',
-               layout:                         'pdf.html',
-               javascript_delay:                2000,
-               show_as_html:                   params.key?('debug')
+    # respond_to do |format|
+      # format.html
+      # format.pdf do
+      #   render pdf:                            'Resume Assessment',
+      #          template:                       'candidates/show.pdf',
+      #          layout:                         'pdf.html',
+      #          javascript_delay:                2000,
+      #          show_as_html:                   params.key?('debug')
+      # end
+
+      respond_to do |format|
+        format.html
+        format.pdf do
+          pdf  = CombinePDF.new
+          pdf2 = render_to_string pdf: 'Resume Assessment',
+                                  template: 'candidates/show.pdf',
+                                  layout: 'pdf.html',
+                                  javascript_delay: 2000
+          resume = @candidate.resume.try(:cv).try(:path)
+          pdf3 = CombinePDF.load(resume)
+          a4_size = [0, 0, 595, 842]
+          # keep aspect ratio intact
+          pdf3.pages.each {|p| p.resize a4_size}
+          # pdf3.save "a4.pdf"
+          pdf << CombinePDF.new(pdf2)
+          pdf << CombinePDF.new(pdf3.to_pdf)
+          send_data pdf.to_pdf, :disposition => 'inline', :type => 'application/pdf'
+        end
       end
+
     end
-  end
+
 
   # GET /candidates/new
   def new
@@ -118,7 +139,6 @@ class CandidatesController < ApplicationController
         # keep aspect ratio intact
         pdf3.pages.each {|p| p.resize a4_size}
         # pdf3.save "a4.pdf"
-
         pdf << CombinePDF.new(pdf2)
         pdf << CombinePDF.new(pdf3.to_pdf)
         send_data pdf.to_pdf, :disposition => 'inline', :type => 'application/pdf'
