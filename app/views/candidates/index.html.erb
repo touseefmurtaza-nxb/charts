@@ -21,7 +21,7 @@
         <td><%= candidate.email %></td>
         <td><%=l candidate.interview_date rescue nil   %></td>
         <!--<td><%#= link_to "View Report", report_candidates_path(id: candidate) %></td>-->
-        <td><%= link_to "View Report", candidate_path(candidate, :format => "pdf") %></td>
+        <td><%= link_to "View Report", candidate_path(candidate, :format => "pdf"), :target => "_blank" %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       candidate_path(candidate), :class => 'btn btn-default btn-xs' %>

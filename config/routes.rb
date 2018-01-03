@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get 'settings/edit' => 'settings#edit'
+
   post '/rate' => 'rater#create', :as => 'rate'
   devise_for :users, path_names: {sign_in: "login", sign_up: "register", sign_out: "logout"}, controllers: {
     confirmations: 'users/confirmations',

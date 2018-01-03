@@ -1,0 +1,1 @@
+SKILL_MATRIX_CHART_TYPE = ['pie', 'line']
